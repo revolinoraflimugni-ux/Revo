@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revo | Digital Creative & Operation Specialist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px 28px;
+    
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 40px;
+
+    z-index: 999;
+}
+section{
+    scroll-margin-top:120px;
+}
+
+/* MENU */
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:rgba(255,255,255,0.8);
+    font-size:15px;
+    font-weight:500;
+    text-decoration:none;
+    transition:0.3s;
+ position:relative;
+}
+.menu a::after{
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:-4px;
+	width:0%;
+	height:2px;
+	background:#5B8CFF;
+	transition:0.3s;
+}
+.menu a:hover{
+color:#ffffff;
+}
+.menu a:hover::after{
+	width:100%;
+}
+	
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0E0E10;
+    color: #F5F5F5;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px 10%;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('revo-dino.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.35);
+    z-index:0;
+}
+
+.hero-text {
+    max-width: 600px;
+	position: relative;
+	z-index: 2;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: 400;
+    color: #5B8CFF;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+.middle-section {
+	background: url('lord-revo.png') no-repeat center center/cover;
+	position: relative;
+}
+
+.middle-section::before{
+	content:"";
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.8)
+}
+.middle-section section{
+	position: relative;
+	z-index:2;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #5B8CFF;
+    color: white;
+}
+
+.primary:hover {
+    box-shadow: 0 0 20px #5B8CFF;
+}
+
+.outline {
+    border: 1px solid #5B8CFF;
+    color: #5B8CFF;
+}
+
+.outline:hover {
+    background: #5B8CFF;
+    color: white;
+}
+
+.hero img {
+    width: 350px;
+    border-radius: 20px;
+    filter: brightness(90%);
+}
+
+/* TRUST */
+.trust {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.trust h2 {
+    font-size: 48px;
+    color: #5B8CFF;
+}
+
+.trust p {
+    color: #aaa;
+}
+
+/* ABOUT */
+.about p {
+    max-width: 700px;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+/* PORTFOLIO */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #18181C;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(91,140,255,0.4);
+}
+
+/* SERVICES */
+.services-grid {
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.service-card {
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+.services{
+    padding:100px 10%;
+    max-width:1200px;
+    margin:auto;
+}
+/* SKILL RATE BAR */
+.skill-item{
+    margin-bottom: 25px;
+}
+
+.skill-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.skill-bar{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.skill-fill{
+    height:100%;
+    width:0; /* 🔥 mulai dari 0 biar animasi */
+    background: linear-gradient(90deg, #5B8CFF, #8FB1FF);
+    border-radius:20px;
+    transition: width 1.2s ease;
+    box-shadow: 0 0 15px rgba(91,140,255,0.6); /* biar glowing & timbul */
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(91,140,255,0.3);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/* CONTACT INFO (TAMBAHAN BARU) */
+.contact-info{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.contact-info a{
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+
+    transition:0.3s;
+}
+
+.contact-info a:hover{
+    transform:translateY(-4px);
+    background:#5B8CFF;
+}
+
+.contact-info a i{
+    margin-right:8px;
+    font-size:18px;
+}
+
+.contact-info a:hover .fa-instagram{
+    color:#E1306C;
+}
+
+.contact-info a:hover .fa-linkedin{
+    color:#0A66C2;
+}
+
+.contact-info a:hover .fa-envelope{
+    color:#5B8CFF;
+}
+
+.contact-info i{
+    transition:0.3s ease;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 40px;
+        width: 250px;
+    }
+
+    .trust {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+/* PORTFOLIO SLIDER */
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius:20px;
+    width: 100%;
+    margin:40px auto;
+}
+
+.slides {
+    display: flex;
+    width: 100%; /* tambahin ini */
+    transition: transform 0.5s ease;
+}
+
+.slide{
+    min-width: 100%; /* 🔥 WAJIB */
+    flex: 0 0 100%;  /* 🔥 SUPER PENTING */
+    display:flex;
+    flex-direction:column;
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    position:relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.slide video{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    border-radius:20px;
+cursor:pointer;
+    pointer-events:auto;
+}
+
+.slide img:hover{
+    transform:scale(1.03);
+}
+
+.slide-content{
+    padding:25px 30px;
+    background:#18181C;
+}
+
+.slide-content h3{
+    margin-bottom:10px;
+    color:#5B8CFF;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    border:none;
+    color:white;
+    font-size:22px;
+    padding:10px 15px;
+    cursor:pointer;
+}
+.slide::after{
+    content:"Click to view details";
+    position:absolute;
+    bottom:15px;
+    right:20px;
+    font-size:12px;
+    background:rgba(0,0,0,0.6);
+    padding:6px 12px;
+    border-radius:20px;
+    opacity:0;
+    transition:0.3s;
+}
+
+.slide:hover::after{
+    opacity:1;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* LIGHTBOX */
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+    transition:0.4s ease;
+
+    z-index:9999;
+}
+
+.lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox img{
+    max-width:85%;
+    max-height:85%;
+    border-radius:15px;
+
+    transform:scale(0.8);
+    transition:0.4s ease;
+}
+
+.lightbox.active img{
+    transform:scale(1);
+}
+
+.close{
+    position:absolute;
+    top:40px;
+    right:60px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+.slide video:hover{
+    transform:scale(1.03);
+
+}
+#video-lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+    transition:0.4s ease;
+
+    z-index:9999;
+}
+
+#video-lightbox.active{
+    opacity:1;
+    visibility:visible;
+
+
+}
+#lightbox-video{
+    max-width:85%;
+    max-height:85%;
+    border-radius:15px;
+    display:none;
+}
+
+#lightbox-img{
+    display:none;
+}
+.video-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.video-wrapper video{
+    width:100%;
+    height:auto;
+    max-height:320px; /* 🔥 SAMAKAN DENGAN GAMBAR */
+    object-fit:cover;
+    border-radius:15px 15px 0 0;
+}
+
+/* PORTFOLIO TAB */
+.portfolio-tabs{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+	margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.tab-btn{
+    padding:14px 30px;
+    border-radius:40px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:transparent;
+    color:white;
+    font-family:'Poppins', sans-serif;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.tab-btn:hover{
+    background:#5B8CFF;
+    border-color:#5B8CFF;
+}
+
+.tab-btn.active{
+    background:#5B8CFF;
+    border-color:#5B8CFF;
+}
+
+.portfolio-content{
+    display:none;
+}
+
+.portfolio-content.active{
+    display:block;
+    animation:fadeIn 0.5s ease;
+}
+
+ #portfolio {
+    padding: 80px 20px 60px 20px; /* jarak dari atas */
+    margin-top: 40px; /* biar ga nempel ke banner */
+    position: relative;
+    z-index: 2;
+}
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+/* DESCRIPTION HIDDEN DEFAULT */
+.description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.3s ease;
+}
+
+/* SAAT SLIDE DIKLIK */
+.slide.active .description {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+
+/* OPTIONAL: cursor biar keliatan clickable */
+.slide {
+    cursor: pointer;
+}
+.skill-item:last-child{
+    margin-bottom: 0;
+}
+.skills{
+    padding:100px 10%;
+    max-width:1100px;
+    margin:auto;
+}
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    font-family:'Poppins', sans-serif;
+}
+
+.skills{
+    padding:120px 10%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.skills-box{
+    background:rgba(255,255,255,0.04);
+    padding:45px;
+    border-radius:20px;
+}
+/* =========================
+   MOBILE ONLY FIX
+   TIDAK MENGUBAH DESKTOP
+========================= */
+
+@media(max-width:768px){
+
+/* NAVBAR */
+.navbar{
+    width:90%;
+    padding:10px 15px;
+}
+
+.menu{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.menu a{
+    font-size:13px;
+}
+
+/* HERO */
+.hero h1{
+    font-size:38px;
+}
+
+.hero h2{
+    font-size:18px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+/* SLIDER */
+.slide img,
+.video-wrapper video{
+    max-height:220px;
+}
+
+.slider-btn{
+    font-size:18px;
+    padding:6px 10px;
+}
+
+/* SERVICES */
+.services{
+    padding:80px 20px;
+}
+
+/* SKILLS */
+.skills{
+    padding:80px 20px;
+}
+
+.skills-box{
+    padding:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+	<div class="menu">
+		<a href="index.html">home</a>
+		<a href="about.html">About Me</a>
+		<a href="#portfolio">portfolio</a>
+		<a href="#contact">contact</a>
+	</div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Revo</h1>
+        <h2>Digital Creative & Operation Specialist</h2>
+        <p>Experienced in digital marketing and sales operations in the F&B industry.</p>
+        <a href="#portfolio" class="btn primary">View Work</a>
+        <a href="#contact" class="btn outline">Work With Me</a>
+    </div>
+   
+</section>
+
+<div class="middle-section">
+<section class="trust">
+    <div>
+        <h2>10+</h2>
+        <p>Scripts Produced</p>
+    </div>
+    <div>
+        <h2>10+</h2>
+        <p>Videos Edited</p>
+    </div>
+    <div>
+        <h2>Data</h2>
+        <p>Driven Strategy</p>
+    </div>
+</section>
+
+<section class="about">
+    <h2>Never Stop To Learn And Explore Something New Things</h2>
+    <p>
+I am an open-minded person who enjoys learning and discovering new things. I have strong creative thinking and problem-solving skills, and I am a hardworking individual.
+    </p>
+</section>
+
+<section id="portfolio">
+
+<h2 style="text-align:center;">Portfolio</h2>
+<p style="text-align:center; color:#aaa; margin-top:10px;">
+Click any project to view details
+</p>
+
+<div class="portfolio-tabs">
+    <button class="tab-btn active" onclick="showPortfolio('admin')">
+        Admin & Sales Operation
+    </button>
+
+    <button class="tab-btn" onclick="showPortfolio('creative')">
+        Digital Creative
+    </button>
+</div>
+
+<div id="admin" class="portfolio-content active">
+<div class="slider">
+<div class="slides" id="slides-admin">
+
+<!-- SLIDE 1 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="cv-porto.jpg">
+<div class="slide-content">
+<h3>Curriculum Vitae</h3>
+<div class="description">
+<p>
+Professional CV highlighting experience in Sales Operations, Digital Creative, and F&B industry workflow management.
+</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="rekapterlambat-porto.png">
+<div class="slide-content">
+<h3>Crew Attendance Recap & Reporting</h3>
+  <div class="description">
+<p>
+Managing and compiling crew attendance records while generating reports to ensure outlet operations run in accordance with established SOPs and operational standards, supporting discipline and workforce accountability.
+</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="rekap-sales-porto.png">
+<div class="slide-content">
+<h3>Operational Needs Recap (Branch)</h3>
+  <div class="description">
+<p>
+Compiling sales data from POS systems to manage and monitor outlet performance for supervisory evaluation.
+</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="komplen-port.jpeg">
+<div class="slide-content">
+<h3>Customer Complaint Handling</h3>
+  <div class="description">
+<p>
+Professionally handling customer complaints by identifying root causes, providing effective solutions, and maintaining high levels of customer satisfaction.
+</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="pembelian-porto.png">
+<div class="slide-content">
+<h3>Recap Oprational Needs Branch</h3>
+  <div class="description">
+<p>
+Monitoring and auditing outlet procurement data to mitigate risks and prevent fraudulent activities.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+ <button class="slider-btn prev" onclick="moveSlideAdmin(-1)">❮</button>
+  <button class="slider-btn next" onclick="moveSlideAdmin(1)">❯</button>
+</div> 
+</div> 
+<div id="creative" class="portfolio-content">
+<div class="slider">
+<div class="slides" id="slides-creative">
+
+<!-- SLIDE 1 VIDEO -->
+<div class="slide" onclick="toggleDesc(this)">
+
+<div class="video-wrapper">
+<video
+muted
+loop
+playsinline
+onclick="openVideo(this); event.stopPropagation();"
+onmouseover="this.play()">
+
+
+<source src="cinematic-produk.mp4" type="video/mp4">
+
+</video>
+</div>
+
+<div class="slide-content">
+<h3>Video Editing & Videography</h3>
+  <div class="description">
+<p>Short-form content optimized for engagement.</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE VIDEO 2 -->
+<div class="slide" onclick="toggleDesc(this)">
+
+<div class="video-wrapper">
+<video
+muted
+loop
+playsinline
+onclick="openVideo(this); event.stopPropagation();"
+onmouseover="this.play()">
+
+
+<source src="voiceover-entertaiment.mp4" type="video/mp4">
+
+</video>
+</div>
+<div class="slide-content">
+<h3>Entertainment Content & Script Development</h3>
+  <div class="description">
+<p>Designing and producing engaging digital content with creative strategies to capture audience interest, enhance brand visibility, and improve engagement performance.</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" onclick="toggleDesc(this)">
+<img src="designgrafis.jpg">
+<div class="slide-content">
+<h3>Graphic Design</h3>
+ <div class="description">
+<p>Designing informative and visually engaging infographics focused on clear message delivery, strong visual hierarchy, and effective audience communication.</p>
+</div>
+</div>
+</div>
+</div>
+
+<button class="slider-btn prev" onclick="moveSlideCreative(-1)">❮</button>
+<button class="slider-btn next" 
+onclick="moveSlideCreative(1)">❯</button>
+
+
+</div>
+</div>
+
+</section>
+</div>
+
+<section class="services">
+<h2 style="text-align:center;">Services</h2>
+
+</section>
+</div>
+<div class="services-grid">
+
+        <div class="service-card">
+            <h3>Video Editing</h3>
+	  <div class="description">
+            <p>Editing short-form video content optimized for engagement and retention.</p>
+        </div>
+</div>
+
+        <div class="service-card">
+            <h3>Content Script Writing</h3>
+            <p>Creating structured scripts based on audience behavior and content strategy.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Graphic Design</h3>
+            <p>Designing visual content for social media branding and promotion.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Data Recap & Reporting</h3>
+            <p>Compiled and organized outlet operational data and sales reports systematically to ensure accurate tracking and business visibility</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Data Processing</h3>
+            <p>Processed and analyzed operational data to monitor performance and support business evaluation and decision-making.</p>
+        </div>
+
+    </div>
+
+<div class="services-grid">
+
+    <div class="service-card">
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>Video Editing</span>
+                <span>80%</span>
+            </div>
+            <div class="skill-bar">
+<div class="skill-fill" data-width="80%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>Content Script Writing</span>
+                <span>65%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="65%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>Graphic Design</span>
+                <span>80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="80%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>Data Processing & Reporting</span>
+                <span>88%</span>
+            </div>
+            <div class="skill-bar">
+               <div class="skill-fill" data-width="80%"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<section class="skills">
+<h2 class="section-title">Tools & Software</h2>
+<div class="skills-box">
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>CapCut</h3>
+            <p>Video editing & motion content creation.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Canva</h3>
+            <p>Graphic design & social media visual creation.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Microsoft Word</h3>
+            <p>Document creation, reporting, and administration tasks.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Microsoft Excel</h3>
+            <p>Data recap, reporting, and spreadsheet management.</p>
+        </div>
+
+    </div>
+    
+</div>
+
+</section>
+</section>
+</section>
+<section class="cta" id="contact">
+
+    <h2>Let's Talk</h2>
+
+    <div class="contact-info">
+
+        <a href="https://www.instagram.com/revolinorm/" target="_blank">
+             <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a href="https://www.linkedin.com/in/revolino-rafli-mugni-561349264/" target="_blank">
+             <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="mailto:revomugni16@email.com">
+             <i class="fas fa-envelope"></i> Email
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Revo. All rights reserved.
+</footer>
+
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+
+    <img id="lightbox-img">
+    <video id="lightbox-video" controls></video>
+
+</div>
+<script>
+
+
+// Slider Admin & Sales
+let adminIndex = 0;
+function moveSlideAdmin(step){
+    const slides = document.getElementById("slides-admin");
+    const total = slides.children.length;
+
+    adminIndex += step;
+
+    if(adminIndex < 0) adminIndex = total -1;
+    if(adminIndex >= total) adminIndex = 0;
+
+    slides.style.transform = `translateX(-${adminIndex*100}%)`;
+}
+
+// Slider Digital Creative
+
+
+</script>
+<script>
+
+// LIGHTBOX IMAGE
+const images = document.querySelectorAll(".slide img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img=>{
+    img.addEventListener("click",(e)=>{
+        e.stopPropagation();
+
+        const lbImg = document.getElementById("lightbox-img");
+        const lbVideo = document.getElementById("lightbox-video");
+
+        lbVideo.pause();
+        lbVideo.style.display="none";
+
+        lbImg.src = img.src;
+        lbImg.style.display="block";
+
+        lightbox.classList.add("active");
+    });
+});
+
+closeBtn.onclick = ()=>{
+    const lbVideo = document.getElementById("lightbox-video");
+
+    lbVideo.pause();
+    lbVideo.src="";
+
+    lightbox.classList.remove("active");
+};
+
+lightbox.onclick = (e)=>{
+    if(e.target === lightbox){
+
+        const lbVideo = document.getElementById("lightbox-video");
+
+        lbVideo.pause();
+        lbVideo.src="";
+
+        lightbox.classList.remove("active");
+    }
+};
+
+
+// SLIDER CREATIVE
+let creativeIndex = 0;
+function moveSlideCreative(step){
+
+    const slides = document.getElementById("slides-creative");
+    const total = slides.children.length;
+
+    creativeIndex += step;
+
+    if(creativeIndex < 0) creativeIndex = total -1;
+    if(creativeIndex >= total) creativeIndex = 0;
+
+    slides.style.transform =
+        `translateX(-${creativeIndex*100}%)`;
+}
+
+function toggleDesc(element) {
+    // Tutup semua slide lain (biar rapi & profesional)
+    document.querySelectorAll(".slide").forEach(slide => {
+        if (slide !== element) {
+            slide.classList.remove("active");
+        }
+    });
+
+    // Toggle slide yang diklik
+    element.classList.toggle("active");
+}
+
+
+// 🔊 TOGGLE SOUND VIDEO
+function toggleSound(video){
+    video.muted = !video.muted;
+    video.play();
+}
+
+function openVideo(video){
+
+    const lightbox = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightbox-img");
+    const lbVideo = document.getElementById("lightbox-video");
+
+    // stop klik slide
+    event.stopPropagation();
+
+    // hide image
+    lbImg.style.display="none";
+
+    // ambil source video
+    const source = video.querySelector("source").src;
+
+    lbVideo.src = source;
+    lbVideo.style.display="block";
+
+    lbVideo.currentTime = 0;
+    lbVideo.play();
+
+    lightbox.classList.add("active");
+}
+</script>
+<script>
+function showPortfolio(type){
+    const admin = document.getElementById("admin");
+    const creative = document.getElementById("creative");
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    // sembunyikan semua
+    admin.classList.remove("active");
+    creative.classList.remove("active");
+
+    // hapus active tombol
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // tampilkan sesuai klik
+    document.getElementById(type).classList.add("active");
+   document.querySelector(`[onclick="showPortfolio('${type}')"]`)
+        .classList.add("active");
+}
+
+</script>
+<script>
+const skillFills = document.querySelectorAll('.skill-fill');
+
+function animateSkills(){
+    skillFills.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        const targetWidth = bar.getAttribute('data-width');
+
+        if(rect.top < window.innerHeight - 100){
+            bar.style.width = targetWidth;
+        }
+    });
+}
+
+window.addEventListener('scroll', animateSkills);
+window.addEventListener('load', animateSkills);
+</script>
+
+</body>
+</html>

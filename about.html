@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Revo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+.about-wrapper{
+	display:flex;
+	align-items:center;
+	gap:50px;
+	margin-top:40px;
+	flex-wrap:wrap;
+	animation: fadeUp 1s ease;
+}
+
+.about-image img{
+	width:220px;
+	height:260px;
+	object-fit:cover;
+	border-radius:18px;
+	box-shadow:0 20px 50px rgba(0,0,0,0.6);
+
+animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+}
+
+.about-content{
+ max-widht:600px;
+}
+.glass-btn{
+    display:inline-block;
+    padding:12px 24px;
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    transition:0.4s;
+}
+
+.glass-btn:hover{
+    background:rgba(255,255,255,0.15);
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background:#0E0E10;
+    color:white;
+    padding:100px 10%;
+}
+
+h1{
+    font-family:'Poppins', sans-serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:700px;
+    color:#aaa;
+    line-height:1.7;
+}
+
+a{
+    color:#5B8CFF;
+}
+.about-page{
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url("images/bg-about.jpg") center/cover no-repeat;
+
+    min-height:100vh;
+}
+/* === ANIMATION === */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-image {
+    animation: fadeLeft 1s ease forwards;
+}
+
+.about-content {
+    animation: fadeUp 1.2s ease forwards;
+}
+</style>
+</head>
+
+<body class="about-page">
+
+<a href="index.html" class="glass-btn">Back Home</a>
+<div class="about-wrapper">
+<div class="about-image">
+	<img src="revo-about.jpg" alt="revo">
+</div>
+<div class="about-content">
+
+<h1>About Me</h1>
+
+<p>
+My name is Revolino, i was born in Bandung 16 July 2004. i have experience working as a content creator on Car Showroom. for now i working in F&B as an Adminstrative Sales Opration on PT Citarasa Kuliner (Cimol Bojot AA).
+ 
+</p>
+
+<p>
+i Have Basic skills for make some scipt for kontent on Social media, Editing Video, Graphic design and of course because im working as an admin i have basic skill for adminisrative things.
+</p>
+
+<p>
+I have worked closely with supervisors and teams to manage daily operations,
+analyze sales performance, and create content strategies that support business growth.
+</p>
+
+</div>
+</div>
+
+</body>
+</html>
